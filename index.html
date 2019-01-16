@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0 auto;
+            padding:0;      /*清除浏览器默认样式*/
+            font-family: "微软雅黑";
+        }
+
+        #nav{
+            width:1200px;
+            height:120px;
+            margin-top:20px;
+            /* background: red; */
+        }
+        .n_l{
+            float: left;
+            width:145px;
+            height:42px;
+            margin-top:28px;
+        }
+        .n_l b{
+            font-size: 32px;
+            font-weight: bold;
+            color:deepskyblue;
+        }
+        .n_l b span{
+            color:#ccc;
+        }
+        .n_r{
+            float: right;
+        }
+        .n_r .n_item{
+            width:100px;
+            height:100px;
+            float: left;
+            line-height: 100px;     /*行高等于高度   垂直居中*/
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;    /*手势*/
+        }
+        .n_r .n_item:hover{
+            border-top:2px solid #02B2B5;
+        }
+        .n_r .active{
+            border-top:2px solid #02B2B5;
+        }
+
+        #imgs{
+            width:100%;
+            height:600px;
+            background: lime;
+            background:url(images/imgs2.jpg);
+            transition:all 0.8s;
+            overflow:auto;
+            color:white;
+        }
+        #imgs h1{
+            font-size:48px;
+            margin-top:200px;
+            text-align:center;
+        }
+        #imgs p{
+            font-size:24px;
+            height:50px;
+            line-height:50px;
+            text-align:center;
+        }
+
+        /*关于我们相关*/
+        #aboutus{
+            width:1190px;
+            height:410px;
+            margin:80px auto;    /*调整位置*/
+            /* background: dodgerblue; */
+        }
+        #aboutus .a_l{
+            width:653px;
+            height:399px;
+            background:url("images/abouts.jpg") no-repeat;
+            float: left;
+            margin-right:40px;
+        }
+        #aboutus .a_r{
+            width:492px;
+            float: right;
+        }
+        #aboutus .a_r p{
+            height:25px;
+        }
+        /*服务领域相关*/
+        #server{
+            width:1200px;
+            height:540px;
+            margin:50px auto;
+            /* background: orange; */
+
+        }
+        #server p{
+            text-align: center;
+        }
+        .s_p1{
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+        .s_p2{
+            font-size: 14px;
+            line-height: 14px;
+            color:#848484;
+        }
+        .listPhoto{
+            width:1190px;
+            height:375px;
+            margin-top: 20px;
+        }
+        /*给每一个图片设置相同的样式*/
+        #server .listPhoto .s_img{
+            width:281px;
+            height:364px;
+            margin:5px 8px;
+            float: left;
+        }
+        #server img{
+            transition: all 1s;
+            margin:0px 0px 0px 0px;
+        }
+        #server img:hover{
+            margin:0px 0px 0px -10px;
+        }
+
+        #success{
+            width:1200px;
+            height:500px;
+            margin:30px auto;
+            /* background: pink; */
+        }
+        #success p{
+            text-align: center;
+        }
+        #success .listPhoto{
+            width:1200px;
+            height:375px;
+            margin-top: 20px;
+        }
+        #success .listPhoto .s_img{
+            width:281px;
+            height:364px;
+            margin-right:10px;
+            float: left;
+        }
+        #success .s_r{
+            float: left;
+            width:390px;
+            height:450px;
+        }
+        #success .listPhoto .img1{
+            width:390px;
+            height:430px;
+        }
+        #success .listPhoto .img2{
+            width:390px;
+            height:207px;
+            margin-bottom: 10px;
+        }
+
+
+        #footer{
+            width:100%;
+            height:400px;
+            background: #323232;
+        }
+        #footer .f_t{
+            width:1200px;
+            height:288px;
+            margin:0px auto;
+        }
+        #footer .f_l{
+            width:420px;
+            height:150px;
+            float: left;
+            border-right: 1px solid #ccc;
+            margin-top:30px;
+            margin-left: 180px;
+        }
+        #footer .f_l p{
+            color:white;
+        }
+        #footer .f_r{
+            width:420px;
+            height:150px;
+            float: left;
+            margin-top:60px;
+            margin-left:120px;
+        }
+        #footer .f_r p{
+            color:white;
+            font-size: 14px;
+            line-height: 30px;
+        }
+        #footer .f_b{
+            border-top: 1px solid #ccc;
+        }
+        #footer .f_b p{
+            margin-top: 20px;
+            text-align: center;
+            font-size:14px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <div class="n_l">
+            <b>Yc <span>leaf</span></b>
+        </div>
+        <div class="n_r">
+            <div class="n_item active">首页</div>
+            <div class="n_item">案例展示</div>
+            <div class="n_item">品牌理念</div>
+            <div class="n_item">企业资讯</div>
+            <div class="n_item">关于我们</div>
+        </div>
+    </div>
+    <div id="imgs">
+        <h1 id="bigH1">速度革命，唯快不破</h1>
+        <p id="bigP">具备竞争力的IT技术服务和解决方案</p>
+    </div>
+    <div id="aboutus">
+        <div class="a_l"></div>
+        <div class="a_r">
+            <p></p><p></p>
+            <p style="font-size:30px;color:#333;">我们</p>
+            <p></p>
+            <p>是众多世界500强、集团和上市公司<br />的长期合作伙伴</p>
+            <p></p><p></p><p></p>
+            <p style="font-size:14px;">这里拥有无敌的创意、精美的视觉、国际化的意识和前瞻性思维！打破传统网站模式，让所有企业能够在短时间内拥有一套高端网站。</p>
+        </div>
+    </div>
+    <div id="server">
+        <p class="s_p1">服务领域</p>
+        <p class="s_p2">以创新理念提升品牌影响力</p>
+        <div class="listPhoto">
+            <div class="s_img"><img src="images/server_1.jpg" /></div>
+            <div class="s_img"><img src="images/server_2.jpg" /></div>
+            <div class="s_img"><img src="images/server_3.jpg" /></div>
+            <div class="s_img"><img src="images/server_4.jpg" /></div>
+        </div>
+    </div>
+    <!--内容派邦差不多，可以复制-->
+    <div id="success">
+        <p class="s_p1">成功案例</p>
+        <p class="s_p2">眼光高度决定品牌厚度！</p>
+        <div class="listPhoto">
+            <div class="s_img img1"><img src="images/success_1.jpg" /></div>
+            <div class="s_img img1"><img src="images/success_1.jpg" /></div>
+            <div class="s_r">
+                <div class="s_img img2"><img src="images/success_2.jpg" /></div>
+                <div class="s_img img2"><img src="images/success_3.jpg" /></div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="f_t">
+            <div class="f_l">
+                <p style="margin-top: 40px;font-size: 16px">客服服务热线</p>
+                <p style="margin-top: 10px;font-size: 20px">400-000-0000（周一至周日：9:00-22:00）</p>
+            </div>
+            <div class="f_r">
+                <p>公司地址：XXX省XXX市XXX县XXX路XXX号</p>
+                <p>邮政编码：000000</p>
+                <p>客服邮箱：xxxx@xxxxxxxx.com</p>
+            </div>
+        </div>
+        <div class="f_b">
+            <p>&copy;2017 xxxxxxxxxxxxxx 版权所有</p>
+            <p>手机版 | xxxxxxxxxxxxxxxxxxxxx | 管理登录</p>
+        </div>
+    </div>
+
+    <script>
+        var bigImg = document.getElementById("imgs");
+        var bigH1 = document.getElementById("bigH1");
+        var bigP = document.getElementById("bigP");
+        var num = 1;
+        setInterval(function(){
+            if(num==3){
+                num = 1;
+            }
+            bigImg.style.background = "url(images/imgs"+num+".jpg)";
+            if(num == 1){
+                bigH1.innerHTML = "国内具备实力的网页建设平台";
+                bigP.innerHTML = "值  得  您  信  赖  的  伙  伴";
+            }else{
+                bigH1.innerHTML = "速度革命，唯快不破";
+                bigP.innerHTML = "具备竞争力的IT技术服务和解决方案";
+            }
+            num++;
+        },3000)
+
+    </script>
+</body>
+</html>
